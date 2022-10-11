@@ -1,0 +1,10 @@
+spring:
+  liquibase:
+    enabled: true
+    contexts: "local"
+    change-log: classpath:changelog/changelog-master.xml
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    jdbcUrl: jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:

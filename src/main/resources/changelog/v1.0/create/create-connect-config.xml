@@ -1,0 +1,37 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+    <changeSet id="create-water-measure-table" author="razdelkin" dbms="hsqldb">
+        <createTable tableName="water_measure">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_WATER_MEASURE_KEY"/>
+            </column>
+            <column name="value" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="temper_type" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-gas-measure-table" author="razdelkin" dbms="hsqldb">
+        <createTable tableName="gas_measure">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_GAS_MEASURE_KEY"/>
+            </column>
+            <column name="value" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
